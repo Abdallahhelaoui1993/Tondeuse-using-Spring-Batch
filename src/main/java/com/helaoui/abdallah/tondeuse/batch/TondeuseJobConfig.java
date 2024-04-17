@@ -74,7 +74,7 @@ public class TondeuseJobConfig  {
         return new FlatFileItemReaderBuilder<Tondeuse>()
                 .name("tondeuseItemReader")
                 .resource(new FileSystemResource(inputFile))
-                .linesToSkip(1) // Skip first line (lawn dimensions)
+                .linesToSkip(1)
                 .lineMapper(lineMapper())
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<Tondeuse>() {{
                     setTargetType(Tondeuse.class);
